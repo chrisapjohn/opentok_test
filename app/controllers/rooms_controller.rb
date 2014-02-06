@@ -1,4 +1,4 @@
-sclass RoomsController < ApplicationController
+class RoomsController < ApplicationController
   before_filter :config_opentok,:except => [:index]
 
 	def index
