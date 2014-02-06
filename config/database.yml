@@ -5,22 +5,24 @@
 #   gem 'sqlite3'
 development:
   adapter: postgresql
-  encoding: unicode
   database: opentok_test_development
   pool: 5
-  username: myapp
-  password:
+  timeout: 5000
+  host: localhost
+  port: 5432
+
 test:
   adapter: postgresql
-  encoding: unicode
-  database: opentok_test_test
+  database: opentok_test_testing
   pool: 5
-  username: myapp
-  password:
+  timeout: 5000
+  host: localhost
+  port: 5432
+
 production:
   adapter: postgresql
-  encoding: unicode
   database: opentok_test_production
   pool: 5
-  username: myapp
-  password:
+  timeout: 5000
+  host: localhost
+  port: 5432
