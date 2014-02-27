@@ -1,27 +1,13 @@
-<div id="newRoom">
-	<fieldset>
-		<legend>Start a new party room</legend>
-		<%= form_for(@new_room) do |f| %>
-		Party Name: <%= f.text_field :name %><br/><br/>
-		Public? <%= f.check_box :public %><br/><br/>
-		<%= f.submit %>
-		<% end %>
-	</fieldset>
-</div>
+<script type="text/javascript" charset="utf-8">
+  var is_ssl = ("https:" == document.location.protocol);
+  var setsHost = is_ssl ? "https://www.setster.com/widget/" : "http://www.setster.com/widget/";
+  document.write(unescape("%3Cscript src='" + setsHost + "js/setster_over.js?v=2' type='text/javascript'%3E%3C/script%3E"));
+</script>
 
-<fieldset>
-	<legend>Existing party rooms</legend>
-	<table cellpadding="2" cellspacing="5">
-		<tr>
-			<th>Name</th>
-			<th>Started</th>
-		</tr>
-
-		<% @rooms.each do |room| %>
-			<tr>
-				<td align="center" width="300px"><a href="/party/<%= room.id %>"><%= room.name %></a></td>
-				<td><%= room.created_at %></td>
-			</tr>
-		<% end %>
-	</table>
-</fieldset>
+<script type="text/javascript" charset="utf-8">
+  var setster_widget_options = {};
+  setster_widget_options.display = "embed";  
+  setster_widget_options.uri = "maven";
+  setster_widget_options.setsterURL = setsHost; 
+  var setster_widget = new Setster.setster_widget(setster_widget_options);
+</script>
